@@ -1,0 +1,89 @@
+body {
+    background-color: #7267CB;
+    color: #9ec2cc;
+}
+
+.menu {
+    text-align: center;
+    margin: 15px;
+}
+
+.menu-gombok {
+    position: fixed;
+    bottom: 10px;
+    left: 0.5%;
+    background-color: #6E3CBC;
+    border-radius: 25px;
+    width: auto;
+    text-align: center;
+    font-size: 30px;
+    display: flex;
+}
+
+.menu-gombok i:hover {
+    transition: 0.4s;
+    font-size: 35px;
+}
+
+.menu-gombok i {
+    cursor: pointer;
+    transition: 0.2s;
+    margin: 5px;
+}
+
+.kep-doboz {
+    background-color: #98BAE7;
+    border-radius: 5px;
+    position: relative;
+    width: 210px;
+    margin: 25px;
+}
+
+.kep-doboz img {
+    margin: 5px;
+    border-radius: 5px;
+}
+
+.kep-interakciok {
+    position: absolute;
+    font-size: 23px;
+    top: 178px;
+    left: 5%;
+}
+
+.kep-interakciok i:first-child {
+    margin-right: 150px;
+}
+
+.kep-interakciok i {
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.kep-interakciok i:hover {
+    font-size: 25px;
+    transition: 0.4s;
+}
+
+.kep-cim {
+    position: absolute;
+    text-align: center;
+    width: 120px;
+    top: -2%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+}
+
+.kep-leiras {
+    font-size: 15px;
+    color: black;
+    word-wrap: break-word;
+    text-align: center;
+}
+
+.kepek {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
