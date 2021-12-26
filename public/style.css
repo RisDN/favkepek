@@ -87,3 +87,57 @@ body {
     flex-direction: row;
     flex-wrap: wrap;
 }
+
+.close {
+    color: rgb(245, 60, 60);
+    opacity: 1;
+    border: none;
+}
+
+.close:hover {
+    color: rgb(187, 14, 14);
+}
+
+.close:focus {
+    border: none;
+    outline: none;
+}
+
+.aktiv {
+    display: block !important;
+}
+
+.inaktiv {
+    display: none !important;
+}
+
+.kep-doboz-befejezes {
+    background-color: #98BAE7;
+    border-radius: 5px;
+    width: 210px;
+    margin: 25px;
+    margin: 0 auto;
+    margin-top: 45px;
+}
+
+.kep-cim-befejezes {
+    position: absolute;
+    text-align: center;
+    width: 120px;
+    top: 50px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+}
+
+.kep-leiras-befejezes {
+    font-size: 15px;
+    color: black;
+    word-wrap: break-word;
+    text-align: center;
+}
+
+.kep-doboz-befejezes img {
+    margin: 5px;
+    border-radius: 5px;
+}
