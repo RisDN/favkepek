@@ -1,4 +1,7 @@
 function menuAlap() {
+    document.querySelector("#uj-leiras").value = null
+    document.querySelector("#uj-link").value = null
+    document.querySelector("#uj-nev").value = null
     menuAllitas(1)
 }
 
@@ -9,8 +12,15 @@ function befejezes() {
     let nev = document.querySelector("#uj-nev").value
     let leiras = document.querySelector("#uj-leiras").value
     let link = document.querySelector("#uj-link").value
-    console.log(nev, leiras, link)
-    befejezesKepernyo(nev, leiras, link)
+    if (nev != "") {
+        if (leiras != "") {
+            if (link != "") {
+                console.log(nev, leiras, link)
+                befejezesKepernyo(nev, leiras, link)
+            } else { console.error("Adj meg egy jo linket!") }
+        } else { console.error("Adj meg egy leirast!") }
+    } else { console.error("Adj meg egy nevet!") }
+
 }
 
 function befejezesKepernyo(kep_nev, kep_leiras, kep_src) {
