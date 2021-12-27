@@ -26,11 +26,23 @@ const teszt = [{
     }
 ]
 
+const adat = localStorage.getItem("favkepek")
+if (adat == null) {
+    localStorage.setItem("favkepek", "[]")
+} else if (adat == "[]") {
+    console.log("üres")
+} else {
+    mentettKepekHozzaadasa()
+}
+
+
 function mentettKepekHozzaadasa() {
-    teszt.forEach(kep => { kepBetoltes(kep) });
+    let adatok = JSON.parse(localStorage.getItem("favkepek"))
+    for (let i = 0; i < adatok.length; i++) { kepBetoltes(adatok[i]) }
 }
 
 function kepBetoltes(kepadat) {
+    //console.log(kepadat)
     let kep_id = kepadat.id
     let kep_nev = kepadat.nev
     let kep_leiras = kepadat.leiras
@@ -38,6 +50,7 @@ function kepBetoltes(kepadat) {
 
     let uj_kep_doboz = document.createElement("div")
     uj_kep_doboz.className = "kep-doboz"
+    uj_kep_doboz.id = kep_id
     uj_kep_doboz.innerHTML =
         `
         <div class="kep-body">
@@ -61,6 +74,3 @@ function kepBetoltes(kepadat) {
     document.querySelector(".kepek").appendChild(uj_kep_doboz)
 
 }
-
-
-mentettKepekHozzaadasa()

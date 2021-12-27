@@ -15,6 +15,12 @@
 </head>
 
 <body>
+
+    <div id="hiba-uzenet">
+        <i style="padding: 3px; font-size: 45px; color: var(--red);" class="fa fa-exclamation"></i><br>
+        <span style="background-color: var(--red); color: whitesmoke; border-radius: 7px; padding: 2px;" id="hiba-uzenet-kijelzo"></span>
+    </div>
+
     <div class="menu">
         <h2>Favképek</h2>
     </div>
@@ -24,25 +30,20 @@
     </div>
 
     <div class="menu-gombok">
-        <i class="fa fa-home" title="Vissza a tetejére"></i>
+        <i class="fa fa-home" title="Vissza a tetejére" onclick="document.querySelector('.menu').scrollIntoView({behavior: 'smooth'})"></i>
         <i class="fa fa-plus" title="Új kép hozzáadása" data-toggle="modal" data-target="#myModal" onclick="menuAlap()"></i>
     </div>
 
     <!-- koszonom w3schools -->
-
-
-    <!-- The Modal -->
     <div class="modal fade" id="myModal">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
 
-                <!-- Modal Header -->
                 <div class="modal-header">
                     <h4 class="modal-title text-success">Új kép hozzáadása</h4>
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
                 </div>
 
-                <!-- Modal body -->
                 <div class="modal-body text-dark">
 
                     <div class="aktiv" id="uj-1">
@@ -60,13 +61,9 @@
                         <input type="text" id="uj-link" placeholder="URL">
                     </div>
 
-                    <div class="inaktiv" id="uj-befejezes">
-
-                    </div>
-
+                    <div class="inaktiv" id="uj-befejezes"></div>
                 </div>
 
-                <!-- Modal footer -->
                 <div class="modal-footer">
                     <div id="uj-1-kovi" class="aktiv">
                         <button type="button" class="btn btn-success" onclick="menuAllitas(2)">Következő</button>
@@ -86,15 +83,61 @@
                         <button type="button" class="btn btn-danger" onclick="menuAllitas(3)">Vissza</button>
                         <button type="button" class="btn btn-success" onclick="befejezesVegleg()">Jó lesz!</button>
                     </div>
+
                 </div>
 
             </div>
         </div>
     </div>
 
+
+    <div class="modal fade" id="interakciok">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+
+                <div class="modal-header" id="modal-header-torles">
+                    <h4 class="modal-title text-success" id="torles-nev"></h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <div class="modal-header" id="modal-header-szerkesztes">
+                    <h4 class="modal-title text-success" id="szerkesztes-nev"></h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <div class="modal-body text-dark">
+
+                    <div class="aktiv" id="uj-1">
+                        <h5>Kérlek adj meg egy <b>nevet</b>:</h5>
+                        <input type="text" id="uj-nev" placeholder="Név">
+                    </div>
+
+                    <div class="aktiv" id="uj-1">
+                        <h5>Kérlek adj meg egy <b>nevet</b>:</h5>
+                        <input type="text" id="uj-nev" placeholder="Név">
+                    </div>
+
+                    <div class="inaktiv" id="uj-befejezes"></div>
+                </div>
+
+                <div class="modal-footer">
+
+                    <div id="uj-1-kovi" class="aktiv">
+                        <button type="button" class="btn btn-success" onclick="menuAllitas(2)">Következő</button>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
     <script src="f5.js"></script>
     <script src="script.js"></script>
     <script src="ujmenu.js"></script>
+    <script src="hiba.js"></script>
+    <script src="interakciok.js"></script>
 </body>
 
 </html>

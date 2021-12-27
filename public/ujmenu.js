@@ -17,11 +17,36 @@ function befejezes() {
             if (link != "") {
                 console.log(nev, leiras, link)
                 befejezesKepernyo(nev, leiras, link)
-            } else { console.error("Adj meg egy jo linket!") }
-        } else { console.error("Adj meg egy leirast!") }
-    } else { console.error("Adj meg egy nevet!") }
+            } else { hiba("Adj meg egy linket!") }
+        } else { hiba("Adj meg egy leírást!") }
+    } else { hiba("Adj meg egy nevet!") }
 
 }
+
+function befejezesVegleg() {
+    let nev = document.querySelector("#uj-nev").value
+    let leiras = document.querySelector("#uj-leiras").value
+    let link = document.querySelector("#uj-link").value
+    let id = new Date().getTime()
+    kepBetoltes({
+        id: id,
+        nev: nev,
+        src: link,
+        leiras: leiras
+    })
+    $('#myModal').modal('hide')
+    let mentettek = JSON.parse(localStorage.getItem('favkepek'))
+        //console.log(mentettek)
+    mentettek.push({
+            id: id,
+            nev: nev,
+            src: link,
+            leiras: leiras
+        })
+        //console.log(mentettek)
+    localStorage.setItem('favkepek', JSON.stringify(mentettek));
+}
+
 
 function befejezesKepernyo(kep_nev, kep_leiras, kep_src) {
     document.querySelector("#uj-befejezes").innerHTML = ""
