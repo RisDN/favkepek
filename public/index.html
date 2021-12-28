@@ -95,38 +95,28 @@
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
 
-                <div class="modal-header" id="modal-header-torles">
-                    <h4 class="modal-title text-success" id="torles-nev"></h4>
+                <div class="modal-header">
+                    <h4 class="modal-title text-danger" id="szerkesztes-cim"></h4>
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
                 </div>
 
-                <div class="modal-header" id="modal-header-szerkesztes">
-                    <h4 class="modal-title text-success" id="szerkesztes-nev"></h4>
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                </div>
-
-                <div class="modal-body text-dark">
-
-                    <div class="aktiv" id="uj-1">
-                        <h5>Kérlek adj meg egy <b>nevet</b>:</h5>
-                        <input type="text" id="uj-nev" placeholder="Név">
-                    </div>
-
-                    <div class="aktiv" id="uj-1">
-                        <h5>Kérlek adj meg egy <b>nevet</b>:</h5>
-                        <input type="text" id="uj-nev" placeholder="Név">
-                    </div>
-
-                    <div class="inaktiv" id="uj-befejezes"></div>
-                </div>
+                <div class="modal-body text-dark" id="szerkesztes-body"></div>
 
                 <div class="modal-footer">
 
-                    <div id="uj-1-kovi" class="aktiv">
-                        <button type="button" class="btn btn-success" onclick="menuAllitas(2)">Következő</button>
+                    <div class="inaktiv" id="torles-footer">
+                        <button type="button" class="btn btn-success" onclick="$('#interakciok').modal('hide')">Mégse</button>
+                        <button type="button" class="btn btn-danger" id="torles-gomb">Törlés</button>
+                    </div>
+
+                    <div class="inaktiv" id="szerkesztes-footer">
+                        <button type="button" class="btn btn-danger" onclick="$('#interakciok').modal('hide')">Mégse</button>
+                        <button type="button" class="btn btn-success" id="szerkesztes-gomb">Törlés</button>
                     </div>
 
                 </div>
+
+
 
             </div>
         </div>
