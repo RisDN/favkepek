@@ -34,7 +34,7 @@ function befejezesVegleg() {
         src: link,
         leiras: leiras
     })
-    $('#myModal').modal('hide')
+    $('#ujkep').modal('hide')
     let mentettek = JSON.parse(localStorage.getItem('favkepek'))
         //console.log(mentettek)
     mentettek.push({
@@ -44,6 +44,7 @@ function befejezesVegleg() {
             leiras: leiras
         })
         //console.log(mentettek)
+    document.querySelector(".nincsenek-kepek").className = "nincsenek-kepek inaktiv"
     localStorage.setItem('favkepek', JSON.stringify(mentettek));
 }
 

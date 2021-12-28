@@ -166,3 +166,29 @@ input {
     margin-left: -150px;
     z-index: 300;
 }
+
+.nincsenek-kepek {
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 23%;
+    width: 350px;
+}
+
+.nincsenek-kepek i {
+    cursor: pointer;
+    background-color: #6E3CBC;
+    border-radius: 25px;
+    width: 50px;
+    height: 30px;
+}
+
+.nincsenek-kepek i:hover {
+    transition: 0.4s;
+    font-size: 35px;
+}
+
+.nincsenek-kepek i {
+    cursor: pointer;
+    transition: 0.2s;
+    margin: 5px;
+}

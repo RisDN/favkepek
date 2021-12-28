@@ -6,6 +6,7 @@ if (adat == null) {
     localStorage.setItem("favkepek", "[]")
 } else if (adat == "[]") {
     console.log("üres")
+    document.querySelector(".nincsenek-kepek").className = "nincsenek-kepek aktiv"
 } else {
     mentettKepekHozzaadasa()
 }

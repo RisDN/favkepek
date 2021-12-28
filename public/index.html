@@ -26,16 +26,17 @@
     </div>
 
     <div class="kepek">
-        <div class="nincsenek-kepek"></div>
+        <div class="nincsenek-kepek inaktiv">
+            <h2>Nincsen egy kép sem<br>Új hozzáadása <i class="fa fa-plus" title="Új kép hozzáadása" data-toggle="modal" data-target="#ujkep" onclick="menuAlap()"></i></h2>
+        </div>
     </div>
 
     <div class="menu-gombok">
         <i class="fa fa-home" title="Vissza a tetejére" onclick="document.querySelector('.menu').scrollIntoView({behavior: 'smooth'})"></i>
-        <i class="fa fa-plus" title="Új kép hozzáadása" data-toggle="modal" data-target="#myModal" onclick="menuAlap()"></i>
+        <i class="fa fa-plus" title="Új kép hozzáadása" data-toggle="modal" data-target="#ujkep" onclick="menuAlap()"></i>
     </div>
 
-    <!-- koszonom w3schools -->
-    <div class="modal fade" id="myModal">
+    <div class="modal fade" id="ujkep">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
 

@@ -15,15 +15,17 @@ function kepTorlesMenu(id, nev) {
     document.getElementById("szerkesztes-footer").className = "inaktiv"
     document.getElementById("torles-footer").className = "aktiv"
     document.getElementById("szerkesztes-cim").innerHTML = `„${nev}” törlése`
+    document.getElementById("szerkesztes-cim").className = "modal-title text-danger"
     document.querySelector("#torles-gomb").onclick = function() { kepTorles(id) }
     $('#interakciok').modal('show')
-    document.getElementById("szerkesztes-body").innerHTML = "<p>Biztosan kiszeretnéd törölni ezt a képet? <br>Ez a művelet nem visszafordítható!</p>"
+    document.getElementById("szerkesztes-body").innerHTML = "<p style='text-align: center;'>Biztosan kiszeretnéd törölni ezt a képet? <br>Ez a művelet nem visszafordítható!</p>"
 }
 
 function kepSzerkesztesMenu(id, nev, leiras, src) {
     document.getElementById("szerkesztes-footer").className = "aktiv"
     document.getElementById("torles-footer").className = "inaktiv"
     document.getElementById("szerkesztes-cim").innerHTML = `„${nev}” szerkesztése`
+    document.getElementById("szerkesztes-cim").className = "modal-title text-primary"
     document.querySelector("#szerkesztes-gomb").onclick = function() { kepSzerkesztes(id) }
     $('#interakciok').modal('show')
     document.getElementById("szerkesztes-body").innerHTML =
