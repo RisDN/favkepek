@@ -7,6 +7,9 @@ function kepTorles(id) {
         }
     }
     localStorage.setItem("favkepek", JSON.stringify(vissza))
+    if (localStorage.getItem("favkepek") == "[]") {
+        window.location.reload()
+    }
     document.getElementById(id).remove()
     $('#interakciok').modal('hide')
 }
@@ -36,6 +39,18 @@ function kepSzerkesztesMenu(id, nev, leiras, src) {
         `
 }
 
-function kepSzerkesztes(id) {
 
+function kepSzerkesztes(id) {
+    let = szerkesztett_nev = document.querySelector("#szerkesztes-menu-nev").value
+    let = szerkesztett_leiras = document.querySelector("#szerkesztes-menu-leiras").value
+    let = szerkesztett_src = document.querySelector("#szerkesztes-menu-src").value
+    let mentettek = JSON.parse(localStorage.getItem("favkepek"))
+    for (let i = 0; i < mentettek.length; i++) {
+        if (mentettek[i].id == id) {
+            mentettek[i].nev = szerkesztett_nev
+            mentettek[i].leiras = szerkesztett_leiras
+            mentettek[i].src = szerkesztett_src
+        }
+    }
+    localStorage.setItem("favkepek", JSON.stringify(mentettek))
 }
