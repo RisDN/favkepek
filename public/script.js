@@ -35,7 +35,7 @@ function kepBetoltes(kepadat) {
                 <p>${kep_nev}</p>
             </div>
 
-        <img width="200" height="200" src="${kep_src}" alt="${kep_nev}">
+        <img width="200" height="200" onerror="hibasKep(${kep_id})" src="${kep_src}" alt="${kep_nev}">
 
         <div class="kep-interakciok">
             <i onclick="kepSzerkesztesMenu(${kep_id}, '${kep_nev}', '${kep_leiras}', '${kep_src}')" class="fa fa-pencil-square-o text-info" title="„${kep_nev}” szerkesztése" style="float: left;"></i>

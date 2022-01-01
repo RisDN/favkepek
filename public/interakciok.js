@@ -33,9 +33,12 @@ function kepSzerkesztesMenu(id, nev, leiras, src) {
     $('#interakciok').modal('show')
     document.getElementById("szerkesztes-body").innerHTML =
         `
-        <input value="${nev}" type="text" name="" id="szerkesztes-menu-nev">
-        <input value="${leiras}" type="text" name="" id="szerkesztes-menu-leiras">
-        <input value="${src}" type="text" name="" id="szerkesztes-menu-src">
+        <label for="szerkesztes-nev">Név</label>   
+        <label for="szerkesztes-leiras">Leírás</label>
+        <label for="szerkesztes-src">URL</label>
+        <input value="${nev}" type="text" name="szerkesztes-nev" id="szerkesztes-menu-nev">
+        <input value="${leiras}" type="text" name="szerkesztes-leiras" id="szerkesztes-menu-leiras">
+        <input value="${src}" type="text" name="szerkesztes-src" id="szerkesztes-menu-src">
         `
 }
 
@@ -53,4 +56,5 @@ function kepSzerkesztes(id) {
         }
     }
     localStorage.setItem("favkepek", JSON.stringify(mentettek))
+    $('#interakciok').modal('hide')
 }
