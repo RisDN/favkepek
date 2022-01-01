@@ -1,0 +1,9 @@
+#Features
+- Ha egy link nem egy képre mutat, ne lehessen hozzáadni (onerror)
+- Kép link kimásolása gomb
+- Kép letöltése, hely kiválasztása, hogy hova (https://stackoverflow.com/questions/12740659/downloading-images-with-node-js)
+
+#Fixek
+- Ha tul hosszu a neve egy kepnek, osszefolyik
+- Alap outlines
+
