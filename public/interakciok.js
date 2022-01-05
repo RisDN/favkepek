@@ -33,12 +33,20 @@ function kepSzerkesztesMenu(id, nev, leiras, src) {
     $('#interakciok').modal('show')
     document.getElementById("szerkesztes-body").innerHTML =
         `
-        <label for="szerkesztes-nev">Név</label>   
-        <label for="szerkesztes-leiras">Leírás</label>
-        <label for="szerkesztes-src">URL</label>
-        <input value="${nev}" type="text" name="szerkesztes-nev" id="szerkesztes-menu-nev">
-        <input value="${leiras}" type="text" name="szerkesztes-leiras" id="szerkesztes-menu-leiras">
-        <input value="${src}" type="text" name="szerkesztes-src" id="szerkesztes-menu-src">
+        <p>
+            <label for="szerkesztes-nev">Név</label>
+            <input class="szerkeszto-input" value="${nev}" type="text" name="szerkesztes-nev" id="szerkesztes-menu-nev">
+        </p> 
+
+        <p>
+            <label for="szerkesztes-leiras">Leírás</label>
+            <input class="szerkeszto-input" value="${leiras}" type="text" name="szerkesztes-leiras" id="szerkesztes-menu-leiras">
+        </p>
+        
+        <p>
+            <label for="szerkesztes-src">URL</label> 
+            <input class="szerkeszto-input" value="${src}" type="text" name="szerkesztes-src" id="szerkesztes-menu-src">
+        </p>
         `
 }
 
